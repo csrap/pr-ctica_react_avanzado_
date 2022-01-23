@@ -1,0 +1,57 @@
+.AnnouncementsPage {
+background-color: azure;
+}
+
+.card-photo {
+  padding: 20px;
+  width: 150px;
+  height: 150px;
+  align-content: center;
+}
+
+.card {
+  display: flex;
+  width: 300px;
+  height: 400px;
+  align-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  color: #65bba2;
+  background-color: #f1faf6;
+  border: 2px solid black;
+  margin-bottom: 50px;
+  border-radius: 10px 10px;
+
+}
+.card-name {
+  color: #65bba2;
+  font-weight: normal;
+  text-align: center;
+  height: 50px;
+  font-size: larger;
+  text-decoration: none;
+}
+
+h5 {
+  font-size: larger;
+  text-decoration: none;
+}
+
+h5.price {
+  background-color:ghostwhite;
+  color:black; 
+  font-weight:normal;
+  text-align: center;
+  height: 50px;
+  width: 100px;
+  padding: 8px;
+  margin-left: 20px;
+  margin-right: 20px;
+  border:2px solid black;
+}
+
+p .sale {
+  font-size: x-large;
+}

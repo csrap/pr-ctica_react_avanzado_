@@ -1,0 +1,16 @@
+.newAdsPage {
+  display: flex;
+  padding: 10px 15px 0 15px;
+  flex-direction: row;
+  align-content: space-between;
+  justify-content: center;
+  align-items: stretch;
+  flex-wrap: nowrap;
+  padding: 20px;
+  background-color: #f1faf6;
+  width: 50%;
+}
+img {
+  width: 150px;
+  height: 150px;
+}

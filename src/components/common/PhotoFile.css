@@ -1,0 +1,11 @@
+div .PhotoFile{
+  padding: 20px;
+}
+
+input.PhotoFile-input {
+  width: 100%;
+    height: 30px;
+    text-align: center;
+    background-color: #abcebe;
+
+}

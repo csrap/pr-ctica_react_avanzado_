@@ -1,0 +1,10 @@
+div .NameInput {
+padding: 20px;
+}
+
+label .NameInputStyle {
+  width: 100%;
+  height: 30px;
+  text-align: center;
+  background-color: #abcebe;
+}
