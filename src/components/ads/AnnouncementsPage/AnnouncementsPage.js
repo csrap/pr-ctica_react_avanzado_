@@ -18,18 +18,7 @@ const EmptyAds = () => (
   </div>
 );
 
-// const NotFoundList = () => (
-//   <div style={{ textAlign: "center" }}>
-//     <p>No results found</p>
-//     <p>Try Again</p>
-
-//   </div>
-// );
-
 function AnnouncementsPage({ history, ...props }) {
-  // const [announcements, setAnnouncements] = useState([]);
-  // const [filteredAdverts, setFilteredAdverts] = useState([]);
-  // const [filters, setFilters] = useState([]);
 
   const dispatch = useDispatch();
   const announcements = useSelector(getAdverts);
@@ -37,22 +26,6 @@ function AnnouncementsPage({ history, ...props }) {
   useEffect(() => {
     dispatch(loadAdverts());
   }, [dispatch]);
-  console.log(announcements)
-  // useEffect(() => {
-  //   if (filters.length === 0) {
-  //     getLastestdAds().then((announcements) => {
-  //       setAnnouncements(announcements);
-  //       setFilteredAdverts(announcements);
-  //     });
-  //   } else {
-  //     getFilterAdvert(filters).then((announcements) => setFilteredAdverts(announcements));
-  //   }
-  // }, [filters]);
-
-
-  // const handleSearch = (search) => {
-  //   setFilters(search);
-  // };
 
   return (
     <>

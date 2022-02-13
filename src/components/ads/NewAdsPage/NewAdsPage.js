@@ -4,8 +4,14 @@ import './NewAdsPage.css';
 import { useState } from 'react';
 import PhotoFile from '../../common/PhotoFile';
 import { createAds } from '../service';
+import { Redirect, useHistory } from "react-router";
 
-function NewAdsPage({ history }) {
+
+function NewAdsPage() {
+  const history = useHistory();
+
+  const [createdAdvertId, setCreatedAdvertId] = useState("");
+
 
   const [value, setValue] = useState({ name: '', sale: '', price: '', tags: [], photo: "" });
 
@@ -43,14 +49,19 @@ function NewAdsPage({ history }) {
     }
 
     try {
-      await createAds(form);
-      history.push('/adverts')
+      const newAdvert = await createAds(form);
+      setCreatedAdvertId(newAdvert.id);
+
     } catch (error) {
       if (error.status === 401) {
         return history.push('/login');
       }
     }
   };
+
+  if (createdAdvertId) {
+    return <Redirect to={`/adverts/`} />;
+  }
 
 
 
@@ -106,7 +117,6 @@ function NewAdsPage({ history }) {
               onChange={handlePhoto}
             />
           </div>
-          {/* photo	string($binary) */}
           <Button
             type="Submit"
             variant="primary"
@@ -115,7 +125,7 @@ function NewAdsPage({ history }) {
         </Button>
         </form>
       </div>
-    </Layout >
+    </Layout>
   );
 }
 

@@ -17,12 +17,12 @@ export const createAds = async (advert) => {
   }
 };
 
-export const getAd = (id = '') => {
+export const getAd = (id) => {
   const url = `${adsBaseUrl}/v1/adverts/${id}`;
   return client.get(url);
 };
 
-export const deleteAdvert = (id = '') => {
+export const deleteAdvert = (id) => {
   const url = `${adsBaseUrl}/v1/adverts/${id}`;
   return client.delete(url);
 };

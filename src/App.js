@@ -12,6 +12,7 @@ import { logout } from './components/auth/service';
 
 
 import AdsDetails from './components/ads/AdPage/AdsDetails';
+import AdsDetailsPage from './components/ads/AdPage/AdsDetailsPage';
 
 
 function App() {
@@ -33,7 +34,7 @@ function App() {
             {routeProps => <LoginPage {...routeProps} />}
           </Route>
           <PrivateRoute path="/adverts/new" component={NewAdsPage} />
-          <PrivateRoute path="/adverts/:id" component={AdsDetails} />
+          <PrivateRoute path="/adverts/:id" component={AdsDetailsPage} />
           <PrivateRoute path="/adverts" component={AnnouncementsPage} />
           <Route exact path="/">
             <Redirect to="/adverts" />

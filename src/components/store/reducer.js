@@ -11,7 +11,7 @@ import {
 } from './types';
 
 
-const defaultState = {
+export const defaultState = {
   auth: true,
   adverts: {
     loaded: false,
@@ -23,16 +23,6 @@ const defaultState = {
   },
 };
 
-// export const reducer = (state = defaultState, action) => {
-//   switch (action.type) {
-//     case AUTH_LOGIN:
-//       return { ...state, auth: true };
-//     case AUTH_LOGOUT:
-//       return { ...state, auth: true };
-//     default:
-//       return state;
-//   }
-// };
 
 export function auth(authState = defaultState.auth, action) {
   switch (action.type) {
@@ -50,7 +40,6 @@ export function adverts(advertsState = defaultState.adverts, action) {
     case ADVERTS_LOADED_SUCCESS:
       return { loaded: true, data: action.payload };
     case ADVERT_LOADED_SUCCESS:
-    case ADVERT_CREATED_SUCCESS:
       return { ...advertsState, data: [...advertsState.data, action.payload] };
     default:
       return advertsState;
@@ -82,9 +71,4 @@ export function ui(uiState = defaultState.ui, action) {
   }
 }
 
-function combinedReducer(state = defaultState, action) {
-  return {
-    auth: auth(state.auth, action),
-    adverts: adverts(state.adverts, action),
-  };
-}
+
